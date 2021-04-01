@@ -1,0 +1,344 @@
+/*Colors:
+    - Sky Blue: #CAEBF2
+    - Carbon Grey: #666666
+    - Watermelon Red: #FF383F
+    - Light Gray: #EFEFEF
+*/
+
+
+/*
+    CSS for the page template
+*/
+
+body {
+    background-color: #d9d9d9;
+}
+
+p {
+    font-size: initial;
+}
+
+mark {
+    background-color: #b3b3b3;
+    color: #CAEBF2;
+    border-radius: 2px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+a {
+    color: #FF383F;
+}
+
+a:hover {
+    color: #FF383F;
+}
+
+
+/*Junbotron Styling*/
+
+#headerJumbotron {
+    background-color: #FF383F;
+    border-radius: 0px;
+}
+
+#headerJumbotronText1 {
+    color: #EFEFEF;
+    margin-left: 10%;
+}
+
+#headerJumbotronText2 {
+    color: #EFEFEF;
+    margin-left: 10%;
+}
+
+#headerJumbotronButton {
+    color: #A9A9A9;
+    margin-left: 10%;
+    background-color: #EFEFEF;
+    border-color: #EFEFEF;
+}
+
+
+/*Navbar Styling*/
+
+#headerNavbar {
+    margin-top: -3%;
+    width: 97%;
+    margin-left: 1.5%;
+    border-radius: 0px;
+    background-color: #666666;
+    color: #A9A9A9;
+}
+
+#headerNavbarTitle {
+    color: #FF383F;
+}
+#headerNavbarTitle {
+    text-decoration: none;
+}
+#submitButton{
+  border-color: #FF383F;
+  color: #FF383F;
+}
+#submitButton:hover{
+  background-color: pink;
+}
+
+
+/*Body Styling*/
+
+#bodyContentContainer {
+    background-color: #EFEFEF;
+    width: 95%;
+    margin-left: 2.5%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#bodyContentHeader {
+    text-align: center;
+    color: #FF383F;
+}
+
+#bodyContentSpacer {
+    height: 10px;
+    width: 100%;
+}
+
+#bodyContentSubHead {
+    color: #FF383F;
+}
+
+#bodyContentText {
+    color: #666666;
+}
+
+/*about.html styling */
+
+#aboutListHeader {
+    border-color: #FF383F;
+    color: #FF383F;
+}
+
+#aboutListGroup {
+    width: 40%;
+    margin-right: 1%;
+}
+
+#aboutGitlabPanel {
+    width: 45%;
+    margin-left: 3%;
+    border-color: #FF383F;
+}
+
+.aboutContentContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#aboutEmailPanel{
+   border-color: #FF383F;
+   width: 25.5%
+}
+
+#aboutEmailContainer{
+   display: flex;
+   flex-direction: row;
+   width: 100%
+}
+
+/*calculators styling*/
+
+#panelOfPanelsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#panelOfPanelsChildren {
+    width: 33%;
+    text-align: center;
+    color: #FF383F;
+    border-color: #FF383F;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+
+/* AAM Calculator styling*/
+
+.AAMCalcIsotopeInputContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+}
+
+#AAMCalcIsotopeAbundanceInput {
+    width: 20%;
+}
+
+#AAMCalcIsotopeMassInput {
+    width: 40%;
+    margin-right: 2%;
+}
+
+.AAMCalcAddField {
+    margin-bottom: 1%;
+}
+
+#AAMFormSubmit {
+    margin-top: 0.5%;
+    background-color: #FF383F;
+    color: #EFEFEF;
+}
+
+#AAMAnsPanel {
+    border-color: #FF383F;
+    color: #666666;
+    margin-top: 0.5%;
+    width: fit-content;
+}
+
+#AAMAnsSpan {
+    color: #FF383F;
+    text-decoration: underline;
+}
+
+
+/*Raidoactive Decay Styling*/
+
+#RadDecaySymInput {
+    width: 30%;
+    font-size: 70px;
+    order: 2;
+}
+
+.RadDecayIsoNoteContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 37%;
+}
+
+.RadDecayAtomicDataContainer {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    width: 10%;
+    /*Scales both child elements*/
+}
+
+#RadDecayMassInput {
+    width: 80%;
+    margin-top: 20%;
+}
+
+#RadDecayAtomicInput {
+    width: 80%;
+    margin-top: 70%
+}
+
+.RadDecayParticleSelectContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5%;
+    margin-left: 35%;
+}
+
+#RadDecayParticleSelect {
+    margin-left: 0.2%;
+    margin-right: 0.2%;
+    background-color: #FF383F;
+    color: #EFEFEF;
+}
+
+#RadDecayIsoNotePanel {
+    width: 40%;
+    border-color: #FF383F;
+    margin-left: 6.6%;
+}
+
+#RadDecayIsoMassPanel {
+    width: 40%;
+    border-color: #FF383F;
+    margin-right: 6.6%;
+    margin-left: 6.6%;
+}
+
+.RadDecayWidgetContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#RadDecayIsoMassInputGroup {
+    margin-top: 3%;
+}
+
+
+/*Element Identifier Styling (ElmI)*/
+
+#ElmISelectPanel {
+    width: 90%;
+    margin-left: 5%;
+    border-color: #FF383F;
+}
+
+#ElmIElementPanel {
+    width: 90%;
+    margin-left: 5%;
+    border-color: #FF383F;
+}
+
+.ElmISelectorsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 2.5%;
+
+}
+
+#ElmISelector{
+    width:31%;
+}
+
+#ElmIIdentifiedName{
+    color:#FF383F;
+}
+
+#ElmIIdentifiedIsoNumber{
+    color: #FF383F;
+    display: inline;
+}
+/*Mobile Styling*/
+
+@media screen and (max-width: 768px) {
+    .aboutContentContainer {
+        flex-direction: column;
+    }
+    #aboutGitlabPanel {
+        width: 99%;
+    }
+    #aboutListGroup {
+        width: 99%;
+    }
+    #panelOfPanelsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    #panelOfPanelsChildren {
+        width: 98%;
+    }
+    #AAMCalcIsotopeAbundanceInput {
+        width: 50%;
+    }
+    #AAMCalcIsotopeMassInput {
+        width: 50%;
+    }
+    #navSearchBar {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}

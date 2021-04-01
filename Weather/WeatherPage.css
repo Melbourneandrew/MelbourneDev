@@ -1,0 +1,37 @@
+h1{
+  color: red;
+}
+
+.weatherButton{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#chkWeather{
+  width: 20%;
+}
+
+.WeatherListItem{
+  display: flex;
+  flex-direction: row;
+}
+
+.WeatherListText{
+  margin-left: 5px;
+  font-weight: bold;
+}
+.Weather-List-Value{
+  color: red;
+  margin-left: 5px;
+}
+
+.location-button-division{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.active{
+  border-width: 4px;
+}
