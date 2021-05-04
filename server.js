@@ -10,7 +10,8 @@ app.use(express.static(path.join(__dirname + '/')))
 //Home Route
 app.get('/', (req, res) => buildPage(res, {
   homePage: "HomePage.html",
-  fragment: "about.html"
+  fragment: "About/about.html",
+  styleSheet: "About/about.css"
 }))
 app.get('/home', (req, res) => buildPage(res, {
   homePage: "HomePage.html",
@@ -39,13 +40,13 @@ app.get('/iot', (req,res) => buildPage(res, {
 app.get('/legacy', (req,res) => buildPage(res, {
   homePage: "HomePage.html",
   fragment: "Legacy/legacy.html",
-  //script: "IOT/iot_dashboard.js",
+  //script: "",
   styleSheet: "Legacy/legacy.css"
 }))
 app.get('/Queryosity', (req,res) => buildPage(res, {
   homePage: "HomePage.html",
   fragment: "Queryosity/q.html",
-  //script: "IOT/iot_dashboard.js",
+  //script: "",
   styleSheet: "Queryosity/q.css"
 }))
 
