@@ -14,7 +14,8 @@ app.get('/', (req, res) => buildPage(res, {
 }))
 app.get('/home', (req, res) => buildPage(res, {
   homePage: "HomePage.html",
-  fragment: "about.html"
+  fragment: "About/about.html",
+  styleSheet: "About/about.css"
 }))
 
 app.get('/Weather', (req, res) => buildPage(res, {
@@ -29,8 +30,26 @@ app.get('/StockChart', (req, res) => buildPage(res, {
   //script: "StockChart/StockChart.js",
   styleSheet: "StockChart/StockChart.css"
 }))
+app.get('/iot', (req,res) => buildPage(res, {
+  homePage: "HomePage.html",
+  fragment: "IOT/IoT_Dashboard.html",
+  script: "IOT/iot_dashboard.js",
+  styleSheet: "IOT/iot_dashboard.css"
+}))
+app.get('/legacy', (req,res) => buildPage(res, {
+  homePage: "HomePage.html",
+  fragment: "Legacy/legacy.html",
+  //script: "IOT/iot_dashboard.js",
+  styleSheet: "Legacy/legacy.css"
+}))
+app.get('/Queryosity', (req,res) => buildPage(res, {
+  homePage: "HomePage.html",
+  fragment: "Queryosity/q.html",
+  //script: "IOT/iot_dashboard.js",
+  styleSheet: "Queryosity/q.css"
+}))
 
-var port = 3000
+var port = 8080
 app.listen(port, () => {
   console.log(`Server started on port ${port}`)
 })
