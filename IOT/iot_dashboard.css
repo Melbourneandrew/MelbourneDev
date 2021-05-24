@@ -4,6 +4,20 @@
   margin-top: 20px;
   margin-bottom: 40px;
 }
+
+.button-panel{
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.iot-btn{
+  margin: 10px;
+}
 .data-box{
   width: 70%;
   height: 250px;

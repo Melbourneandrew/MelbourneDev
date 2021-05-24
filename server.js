@@ -1,13 +1,14 @@
 var express = require('express')
 var fs = require('fs')
-var cheerio = require('cheerio')
+var cheerio = require('cheerio') // server side DOM rendering
 var path = require('path')
+
 
 var app = express()
 
 app.use(express.static(path.join(__dirname + '/')))
 
-//Home Route
+//ROUTES
 app.get('/', (req, res) => buildPage(res, {
   homePage: "HomePage.html",
   fragment: "About/about.html",
@@ -31,24 +32,89 @@ app.get('/StockChart', (req, res) => buildPage(res, {
   //script: "StockChart/StockChart.js",
   styleSheet: "StockChart/StockChart.css"
 }))
-app.get('/iot', (req,res) => buildPage(res, {
+app.get('/iot', (req, res) => buildPage(res, {
   homePage: "HomePage.html",
   fragment: "IOT/IoT_Dashboard.html",
   script: "IOT/iot_dashboard.js",
   styleSheet: "IOT/iot_dashboard.css"
 }))
-app.get('/legacy', (req,res) => buildPage(res, {
+app.get('/legacy', (req, res) => buildPage(res, {
   homePage: "HomePage.html",
   fragment: "Legacy/legacy.html",
   //script: "",
   styleSheet: "Legacy/legacy.css"
 }))
-app.get('/Queryosity', (req,res) => buildPage(res, {
+app.get('/Queryosity', (req, res) => buildPage(res, {
   homePage: "HomePage.html",
   fragment: "Queryosity/q.html",
   //script: "",
   styleSheet: "Queryosity/q.css"
 }))
+
+//PROJECT INDRA
+
+var url = 'mongodb+srv://admin:MongoRox2k23@mdev.kzf7h.mongodb.net/testdb?retryWrites=true&w=majority';
+var mongodb = require('mongodb');
+var MongoClient = mongodb.MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
+
+app.get('/indra', async (req, res) => {
+  console.log("Indra Data Incoming");
+  const indraData = req.query;
+  console.log(JSON.stringify(indraData));
+
+  try{
+    await MongoClient.connect();
+
+    const db = MongoClient.db();
+
+    await db.collection('test-collection').insertOne(indraData);
+  }catch(err){
+    console.log(err);
+    res.status(500);
+    res.send(err);
+  }
+})
+
+app.get('/indra-data', async (req, res) => {
+  console.log("Indra Data Requested");
+
+  try{
+    await MongoClient.connect();
+
+    const db = MongoClient.db();
+
+    const indraData = await db.collection('test-collection').find({}).toArray();
+
+    res.json(indraData);
+  }catch(err){
+    console.log(err);
+    res.status(500);
+    res.send(err);
+  }
+})
+
+app.get('/indra-drop', async (req,res) => {
+  console.log("Indra data drop requested...");
+
+  try{
+    await MongoClient.connect();
+
+    const db = MongoClient.db();
+
+    db.collection('test-collection').drop(function(err, delOK){
+      if(err) throw err;
+      if(delOK) console.log("Indra data dropped")
+    });
+
+    res.status(200);
+  }catch(err){
+    console.log(err);
+    res.status(500);
+    res.send(err);
+  }
+})
+
+//PROJECT INDRA END
 
 var port = 8080
 app.listen(port, () => {
