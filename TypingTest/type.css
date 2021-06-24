@@ -1,0 +1,21 @@
+.test-word{
+  display:inline-block;
+}
+
+.test-letter{
+  display:inline-block;
+  font-size: 60px;
+}
+
+.resutls{
+  display: flex;
+  flex-direction: row;
+}
+
+#wpm{
+  color: #FF383F;
+}
+
+#new-test{
+  margin-left: 100px;
+}
