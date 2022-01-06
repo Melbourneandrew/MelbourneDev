@@ -10,14 +10,6 @@ const router = require('./routes.js')
 app.use(router);
 
 
-
-app.get('/Web3', (req, res) => buildPage(res, {
-  homePage: "HomePage.html",
-  fragment: "Web3/Web3.html",
-  script: "Web3/Web3.js",
-  styleSheet: "Web3/Web3.css"
-}))
-
 //PROJECT INDRA
 
 var url = 'mongodb+srv://admin:MongoRox2k23@mdev.kzf7h.mongodb.net/testdb?retryWrites=true&w=majority';

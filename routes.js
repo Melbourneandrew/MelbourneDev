@@ -57,6 +57,12 @@ router.get('/typing-test', (req, res) => buildPage(res, {
   script: "TypingTest/type.js",
   styleSheet: "TypingTest/type.css"
 }));
+router.get('/Web3', (req, res) => buildPage(res, {
+  homePage: "HomePage.html",
+  fragment: "Web3/Web3.html",
+  script: "Web3/Web3.js",
+  styleSheet: "Web3/Web3.css"
+}))
 
 
 function buildPage(response, pageSpec) {
