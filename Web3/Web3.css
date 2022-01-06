@@ -1,0 +1,7 @@
+.web3-button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    background-color: #FF383F;
+}
